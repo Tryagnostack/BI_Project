@@ -3,12 +3,12 @@
  */
 package bi_project;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
+    // TODO: make it
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
     }
 }
