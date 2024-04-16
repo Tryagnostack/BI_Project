@@ -11,9 +11,6 @@ import java.time.LocalDateTime;
 
 import javax.imageio.ImageIO;
 
-import org.json.simple.*;
-import org.json.simple.parser.*;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,7 +23,6 @@ import com.google.gson.JsonParser;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
 
 
 
@@ -127,9 +123,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        JSONParser parser = new JSONParser();
         
         try {
+            
             JsonObject jsonObject = JsonParser.parseReader(new FileReader(".\\config.json")).getAsJsonObject();
             url = jsonObject.get("QKART_URL").getAsString();
             ssFolder = jsonObject.get("ScreenshotSaveLocation").getAsString();
